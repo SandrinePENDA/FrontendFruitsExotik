@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Bienvenue DU COMPONENT sur le blog mes-fruits-exotik.fr</h1>
+        <h1>Bienvenue sur votre blog mes-fruits-exotik.fr</h1>
       <div class="rowLogo" id="nav">
           <a href="/"><img alt="logo du blog mes fruits exotik" src="../assets/logoExotik.png"></a>
       </div>
