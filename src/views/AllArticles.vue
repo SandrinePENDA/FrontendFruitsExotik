@@ -2,7 +2,7 @@
     <div class="ListArticles">
     <!--    <Articles v-bind:articles="articles" />  -->
         <Articles v-for="article in articles" :key="article.id" :mini_title="article.title" :mini_photo_fruit="article.photo_fruit"  :mini_country_fruit="article.country_fruit"></Articles>
-        <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+    <!--    <b-card no-body class="overflow-hidden" style="max-width: 540px;">
             <b-row no-gutters>
                 <b-col md="6">
                     <b-card-img src="./assets/image_article.jpg" alt="Image d'un fruit exotique et  rare" class="rounded-0"></b-card-img>
@@ -16,7 +16,7 @@
                     </b-card-body>
                 </b-col>
             </b-row>
-        </b-card>
+        </b-card> -->
     </div>
 
 </template>

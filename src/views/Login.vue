@@ -23,7 +23,7 @@
             <div class=" mt-6">
               Pas encore membre ?
               <router-link class="text-green-600" to='/register'>Je m'inscris</router-link><br>
-          </div><br>
+            </div><br>
             <div v-html="validation"></div>
         </div>
     </template>

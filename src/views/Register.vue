@@ -6,6 +6,7 @@
               <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
                   <h1 class="mb-8 text-3xl text-center">Devenez membre !</h1>
                     <input
+                      style="width:28em;text-align:center"
                       type="text"
                       name="name"
                       v-model="name"
@@ -13,6 +14,7 @@
                     /><br><br>
 
                     <input
+                      style="width:28em;text-align:center"
                       type="text"
                       name="email"
                       v-model="email"
@@ -20,6 +22,7 @@
                     /><br><br>
 
                     <input
+                      style="width:28em;text-align:center"
                       type="password"
                       name="password"
                       v-model="password"
@@ -28,6 +31,7 @@
                         <small v-if="this.password<6">Le mot de passe doit avoir au moins 6 caractères.</small><br>
 
                     <input
+                      style="width:28em;text-align:center"
                       type="password"
                       name="confirm_password"
                       v-model="confirm_password"
@@ -35,11 +39,15 @@
                     /><br><br>
                         <small v-if="this.password!==this.confirm_password">La confirmation doit être simlaire au mot de passe choisi.</small>
 
-                    <button
+                    <b-button variant="primary"
                       type="submit"
                       v-on:click="this.registerValidation"
                     >Je crée mon compte
-                    </button>
+                </b-button><br><br>
+                <div class=" mt-6">
+
+                  <router-link class="text-green-600" to='/login'>Si vous avez déjà un compte, cliquez ici</router-link><br>
+                </div><br>
 
                 <div class="text-center text-sm text-gray-600 mt-4">
                       En cliquant sur le bouton "Je crée mon compte", vous vous soumettez au règlement intérieur<br> de ce blog dont toute violation
@@ -89,6 +97,12 @@ export default {
         .then(response => response.json())
         .then(result => this.validation=result['message'])
         .catch(error => console.log('error', error));
+
+        this.name = "";
+        this.email = "";
+        this.country_fruit = "";
+        this.password = "";
+        this.confirm_password = "";
     }
 
   }
