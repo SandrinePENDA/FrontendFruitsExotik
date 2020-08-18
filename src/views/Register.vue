@@ -84,7 +84,8 @@ export default {
         redirect: 'follow'
       };
 
-      fetch("http://localhost:8000/api/create", requestOptions)
+     // fetch("http://localhost:8000/api/create", requestOptions)
+      fetch("https://fierce-beyond-11866.herokuapp.com/api/create", requestOptions)
         .then(response => response.json())
         .then(result => this.validation=result['message'])
         .catch(error => console.log('error', error));

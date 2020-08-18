@@ -54,7 +54,7 @@
                   redirect: 'follow'
             };
 
-            fetch("http://localhost:8000/api/login", requestOptions)
+            fetch("https://fierce-beyond-11866.herokuapp.com/api/login", requestOptions)
               .then(response => response.json())
               .then(result => {console.log(result); this.token=result['token_type']; this.validation=result['message']})
             //  .then(() =>{this.$router.push({ name: "MySpace"})}) // pour rediriger vers l'espace membre.

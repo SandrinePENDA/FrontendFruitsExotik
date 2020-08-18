@@ -46,8 +46,9 @@ export default {
     /* Add a black background color to the top navigation */
     .topnav {
     background-color: #B0E0E6;
-    height: 3em;
+    height: 3.6em;
     overflow: hidden;
+    margin-bottom: 20px;
     }
 
     /* Style the links inside the navigation bar */

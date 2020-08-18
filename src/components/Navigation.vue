@@ -9,12 +9,17 @@
         <!--  <router-link to="/login"><button type="button" name="buttonConnexion">Connexion</button></router-link> -->
           <input type="text" placeholder="Une recherche ? C'est ici." name="search">
           <button type="submit"><i class="fa fa-search"></i> Rechercher</button>
-      </div>
+      </div><br>
 
       <div class="topnav" id="menu">
-            <a href="/articles" class="active">Voir tous les Mini-articles</a>
-            <a href="/myspace">Mon compte</a>
-            <router-link to="/login"><button id="connexion" type="button" name="buttonConnexion">ENTRER</button></router-link>
+            <b-button id="allMini" href="#/articles" pill variant="outline-secondary">Voir tous les Mini-articles</b-button>
+        <!--    <a href="/articles" class="active">Voir tous les Mini-articles</a> -->
+            <b-button id="createMini" href="#/myspace" pill variant="outline-secondary">Mon compte</b-button>
+        <!--    <a href="/myspace">Mon compte</a> -->
+        <!--    <router-link to="/add"><button id="createMini" type="button" name="createMini">Créer un mini-article</button></router-link>  -->
+            <b-button id="createMini" href="#/add" pill variant="outline-secondary">Créer un mini-article</b-button>
+            <b-button id="buttonEnter" href="#/login" pill variant="success">Accéder au site</b-button>
+        <!--    <router-link to="/login"><button id="connexion" type="button" name="buttonConnexion">ENTRER</button></router-link>  -->
       </div>
 
 
@@ -34,8 +39,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#connexion {
-    margin-left: 75em;
+#allMini {
+    margin-left: 2em;
+}
+
+#createMini {
+/*    margin-left: 20em; */
+}
+#buttonEnter {
+   margin-left: 63em;
 }
 
 </style>
