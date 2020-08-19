@@ -1,5 +1,5 @@
 <template>
-  <div class="register mb-24">
+  <div class="articleForm">
     <!-- component -->
     <div class="bg-grey-lighter min-h-screen flex flex-col">
       <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
@@ -106,7 +106,7 @@
                 redirect: 'follow'
               };
 
-              fetch("http://localhost:8000/api/articles", requestOptions)
+              fetch("https://fierce-beyond-11866.herokuapp.com/api/articles", requestOptions)
                 .then(response => response.json())
                 .then(result => this.validation=result['message'])
                 .catch(error => console.log('error', error));
@@ -127,4 +127,9 @@
     .validTop {
         display: topright;
     }
+
+    .articleForm {
+         height: 820px;
+    }
+
 </style>

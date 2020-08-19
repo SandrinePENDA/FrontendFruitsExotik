@@ -82,7 +82,6 @@ export default {
       var myHeaders = new Headers();
        myHeaders.append("Accept", "application/json");
        myHeaders.append("Content-Type", "application/json");
-    //   myHeaders.append("Cookie", "XSRF-TOKEN=eyJpdiI6ImpkWStFUnMzYmg2N1Qzcms5Y1VBNnc9PSIsInZhbHVlIjoiUGZ1MnE5WmpJQ2YzdC9wcDFKSmp5S05uWGFtVmZmWUYvM3ZVK0lIZG1uQ1YzbWMrVVkraVYyOEc0MGR1d08xQlJhOFp3QlNNTTVDSUpvZ0dBYTFha25pN1RZVXpHWnRHMzgzZEpJcXFkNjc5SGhocG5JTkQrNjZkellUSEVDUFQiLCJtYWMiOiIxMTdlYzEwYTA4ZWYxMDRkYTZiMzNjNjAzMjA2OGI2NWIyZTlhOGJkNmUwODRjOWFhYjhlMDRiYjNkMTM0ODgzIn0%3D; laravel_session=eyJpdiI6IlVldTkxU25IbUtvZHRmQzYxOTQyVkE9PSIsInZhbHVlIjoiU3ZIVk1XWEN1UGsxUlJpQ205TGtVYnVJRUQ1enRnYlRmcHFMZm93VDFQWGtZQ2hjaHBuRXFub1pEWS9Oc1g4WWZPcWZVbWdpZmx0aldMeHJJNVdUVzR4YVoyNkl3WDZLRHd3NG13TVpWZWNLZUVtdEpuUUVTdnpRWUo1dTNRcTUiLCJtYWMiOiI0Zjk5NDQ1MjNlMTIxZjQ0OWFkNTEzYjA1YTgyYjk2MWVmMjdhMjAwODE5NmRhMDJjMjU0MGU1ZjYyYjc0OTUwIn0%3D");
       var raw = JSON.stringify({"name":this.name,"email":this.email,"password":this.password});
 
       var requestOptions = {

@@ -14,7 +14,7 @@ export default {
   name: 'Home',
   components: {
     Navigation,
-    HomePage
+    HomePage,
   }
 }
 </script>

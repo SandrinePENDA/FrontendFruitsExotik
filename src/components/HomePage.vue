@@ -1,16 +1,16 @@
 <template>
   <div>
     <h1>A PARAÎTRE LE MOIS PROCHAIN...</h1>
-    <b-carousel
+    <b-carousel class="carouselContainer"
       id="carousel-1"
       v-model="slide"
       :interval="4000"
       controls
       indicators
       background="#ababab"
-      img-width="1024"
-      img-height="480"
-      style="text-shadow: 1px 1px 2px #333; margin-left:30em; margin-right:30em;"
+      img-width="490"
+      img-height="275"
+      style="text-shadow: 1px 1px 2px #333; margin-left:30em; margin-right:30em;  margin-bottom:10em"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
@@ -20,9 +20,9 @@
         <template v-slot:img>
           <img
             class="d-block img-fluid w-100"
-            width="580"
-            height="387"
-            src="../assets/Carousel/akebia.jpg"
+            width="490"
+            height="275"
+            src="../assets/Carousel/akebia.png"
             alt="Fruit exotique à peau violette"
           >
         </template>
@@ -31,18 +31,18 @@
         </p>
       </b-carousel-slide>
 
-      <b-carousel-slide caption="Salak">
+      <b-carousel-slide caption="Aki">
         <template v-slot:img>
           <img
             class="d-block img-fluid w-100"
-            width="580"
-            height="387"
-            src="../assets/Carousel/peauserpent.png"
-            alt="Fruit exotique aguaje d'Amazonie"
+            width="490"
+            height="275"
+            src="../assets/Carousel/aki-fruit-mortel.png"
+            alt="Fruit exotique akée ou aki en Jamaïque"
           >
         </template>
         <p>
-          L'aspect de sa peau lui donne le surnom de "fruit du serpent" ...
+          Appelé aussi Akée, mal préparé ce fruit est mortel...
         </p>
       </b-carousel-slide>
 
@@ -50,9 +50,9 @@
         <template v-slot:img>
           <img
             class="d-block img-fluid w-100"
-            width="580"
-            height="387"
-            src="../assets/Carousel/citroncaviar2.png"
+            width="490"
+            height="275"
+            src="../assets/Carousel/citroncaviar2(1).png"
             alt="Fruit exotique citron caviar"
           >
         </template>
@@ -65,8 +65,8 @@
         <template v-slot:img>
           <img
             class="d-block img-fluid w-100"
-            width="580"
-            height="387"
+            width="490"
+            height="275"
             src="../assets/Carousel/ayal.jpg"
             alt="Fruit exotique rare, aspect flamboyant, l'ayal"
 
@@ -81,9 +81,9 @@
         <template v-slot:img>
           <img
             class="d-block img-fluid w-100"
-            width="580"
-            height="387"
-            src="../assets/Carousel/Caramboles.jpg"
+            width="490"
+            height="275"
+            src="../assets/Carousel/Caramboles.png"
             alt="Fruit exotique répandu en Asie"
           >
         </template>
@@ -115,5 +115,7 @@
 </script>
 
 <style scoped>
-
+/*    .carouselContainer {
+        height: 900px;
+    } */
 </style>

@@ -1,60 +1,45 @@
 <template>
-    <div class="ListArticles">
-    <!--    <Articles v-bind:articles="articles" />  -->
-        <Articles v-for="article in articles" :key="article.id" :mini_title="article.title" :mini_photo_fruit="article.photo_fruit"  :mini_country_fruit="article.country_fruit"></Articles>
-    <!--    <b-card no-body class="overflow-hidden" style="max-width: 540px;">
-            <b-row no-gutters>
-                <b-col md="6">
-                    <b-card-img src="./assets/image_article.jpg" alt="Image d'un fruit exotique et  rare" class="rounded-0"></b-card-img>
-                </b-col>
-                <b-col md="6">
-                    <b-card-body v-bind:to="'/articles/'" title="Horizontal Card">
-                        <b-card-text>
-                            This is a wider card with supporting text as a natural lead-in to additional content.
-                            This content is a little bit longer.
-                        </b-card-text>
-                    </b-card-body>
-                </b-col>
-            </b-row>
-        </b-card> -->
+    <div class="">
+        <div v-for="item in allArticles" :key="item.id" :title="item.title" :photo_fruit="item.photo_fruit" :country_fruit="item.country_fruit" :created_at="item.created_at">
+            <h4>
+                <img src="../assets/image_article.jpg" alt="photo d'un fruit exotique" style="width: 200px;height=200px">
+                {{ item.title }}
+            </h4>
+            <p>
+                {{ item.photo_fruit }}
+            </p>
+            <p>
+                {{ item.country_fruit }}<br>
+                Mini-Article créé le :{{ item.created_at }}
+            </p>
+        </div>
     </div>
 
 </template>
 
 
 <script>
-import Articles from '@/components/Articles.vue'
 
 
 export default {
   name: 'AllArticles',
-  components: {
-      Articles
-  },
   data() {
     return {
-        articles: {}
+        allArticles: []
     }
 },
-
-beforeMount(){
-
-},
-
-methods :{
-
-
-},
-
     created() {
        // GET request using fetch with set headers
-       var myHeaders = new Headers();
-       myHeaders.append("Accept", "application/json");
-       myHeaders.append("Content-Type", "application/json");
-    fetch("http://localhost:8000/api/articles?_limit=10", { myHeaders })
-      .then(response => response.json())
-      .then(data => (this.articles = data.articles));
-    }
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };
+
+    fetch("http://localhost:8000/api/articles", requestOptions)
+    .then(response => response.json())
+    .then(data => (this.allArticles = data.allArticles))
+    .catch(error => console.log('error', error));
+}
 
 }
 
@@ -71,10 +56,6 @@ methods :{
         line-height: 1.4;
     }
     .btn {
-    /*    background: #7FFF00;
-
-
-    */
         display:inline-block;
         border: solid #006400 2px;
         border-radius: 5px;

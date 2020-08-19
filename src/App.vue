@@ -2,16 +2,19 @@
   <div id="app">
     <Navigation />
     <router-view/>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navigation from '@/components/Navigation.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
     name: "app",
     components: {
-        Navigation
+        Navigation,
+        Footer
     }
 }
 
@@ -20,26 +23,10 @@ export default {
 <style>
 
     #app {
-      font-family: Avenir, Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       text-align: center;
-      color: #2c3e50;
+      height: 800px;
     }
 
-    #nav {
-      padding: 30px;
-    }
-
-    #nav a {
-      font-weight: bold;
-      color: #2c3e50;
-    }
-/*
-    #nav a.router-link-exact-active {
-      color: #42b983;
-    }
-*/
     .rowLogo {
         text-align: center;
     }
@@ -47,7 +34,6 @@ export default {
     .topnav {
     background-color: #B0E0E6;
     height: 3.6em;
-    overflow: hidden;
     margin-bottom: 20px;
     }
 
@@ -61,16 +47,5 @@ export default {
     font-size: 17px;
     }
 
-    /* Change the color of links on hover */
-    .topnav a:hover {
-/*    background-color: #ddd; */
-    color: black;
-    text-decoration: none;
-    }
 
-    /* Add a color to the active/current link */
-    .topnav a.active {
-    background-color: #4CAF50;
-    color: white;
-    }
 </style>
