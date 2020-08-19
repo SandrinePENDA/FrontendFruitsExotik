@@ -12,12 +12,12 @@
       </div><br>
 
       <div class="topnav" id="menu">
-            <b-button id="allMini" href="#/articles" pill variant="outline-secondary">Voir tous les Mini-articles</b-button>
+            <b-button id="allMini" href="#/articles" pill variant="outline-primary">Voir tous les Mini-articles</b-button>
         <!--    <a href="/articles" class="active">Voir tous les Mini-articles</a> -->
-            <b-button id="createMini" href="#/myspace" pill variant="outline-secondary">Mon compte</b-button>
+            <b-button id="createMini" href="#/myspace" pill variant="outline-primary">Mon compte</b-button>
         <!--    <a href="/myspace">Mon compte</a> -->
         <!--    <router-link to="/add"><button id="createMini" type="button" name="createMini">Créer un mini-article</button></router-link>  -->
-            <b-button id="createMini" href="#/add" pill variant="outline-secondary">Créer un mini-article</b-button>
+            <b-button id="createMini" href="#/add" pill variant="outline-primary">Créer un mini-article</b-button>
             <b-button id="buttonEnter" href="#/login" pill variant="success">Accéder au site</b-button>
         <!--    <router-link to="/login"><button id="connexion" type="button" name="buttonConnexion">ENTRER</button></router-link>  -->
       </div>
@@ -40,7 +40,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #menu {
-    
+
 }
 #allMini {
     margin-left: 2em;
